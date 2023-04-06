@@ -74,7 +74,11 @@ function checkAnswer(currentLevel){
             gamePattern = []
             clickCount = 0 
             playSound("wrong")
-            $("#level-title").text("Press A Key to Start")
+            $("#level-title").text("Game Over, Press Any Key to Restart")
+            $("body").addClass("game-over")
+            setTimeout(() => {
+                $("body").removeClass("game-over")
+            }, 200);
             return  
         }
     }
